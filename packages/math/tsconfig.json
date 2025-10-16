@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/ui/*": ["packages/ui/src/*"],
+      "@workspace/math/*": ["packages/math/src/*"]
+    },
+    "ignoreDeprecations": "6.0",
+    "forceConsistentCasingInFileNames":  true,
+    "strict": true
+  }
+}

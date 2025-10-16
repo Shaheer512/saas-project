@@ -1,4 +1,12 @@
 {
-  "extends": "@workspace/typescript-config/base.json"
+  "extends": "@workspace/typescript-config/base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "ignoreDeprecations": "6.0",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }
+
 
