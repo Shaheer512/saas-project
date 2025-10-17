@@ -1,0 +1,14 @@
+{
+  "extends": "@workspace/typescript-config/base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@workspace/backend/*": ["./convex/*"]
+    },
+    "jsx": "preserve",
+    "ignoreDeprecations": "6.0",
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["."],
+  "exclude": ["node_modules"]
+}
