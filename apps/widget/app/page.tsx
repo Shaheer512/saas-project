@@ -1,7 +1,5 @@
 "use client"
 import { Button } from "@workspace/ui/components/button"
-import { add } from "../../../packages/math/src/add"
-import { Input } from "@workspace/ui/components/input"
 import { useMutation, useQuery } from "convex/react"
 import {api} from "@workspace/backend/_generated/api"
 
