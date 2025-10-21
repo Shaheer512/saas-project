@@ -8,6 +8,7 @@
  * @module
  */
 
+import type * as public_contactSession from "../public/contactSession.js";
 import type * as users from "../users.js";
 
 import type {
@@ -25,6 +26,7 @@ import type {
  * ```
  */
 declare const fullApi: ApiFromModules<{
+  "public/contactSession": typeof public_contactSession;
   users: typeof users;
 }>;
 declare const fullApiWithMounts: typeof fullApi;
