@@ -33,7 +33,7 @@ export const create = mutation({
             email:args.email,
             organizationId:args.organizationId,
             expiresAt,
-            metedata:args.metadata,
+            metadata:args.metadata,
         });
         return contactSessionsId;
     },
