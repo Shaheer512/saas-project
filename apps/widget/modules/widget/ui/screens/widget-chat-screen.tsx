@@ -9,6 +9,9 @@ import {
 import { Button } from "@workspace/ui/components/button";
 import { WidgetHeader } from "../components/widget-header";
 import { ArrowLeftIcon, MenuIcon } from "lucide-react";
+import {DicebearAvatar} from "@workspace/ui/components/dicebear-avatar"
+import { UseInfiniteScroll } from "@workspace/ui/hooks/use-infinite-scroll";
+import { InfiniteScrollTrigger } from "@workspace/ui/components/infinite-scroll-trigger";
 import { useAtomValue, useSetAtom } from "jotai";
 import {
   contactSessionAtomFamily,
@@ -78,7 +81,12 @@ export const WidgetChatScreen = () => {
     { initialNumItems: 10 }
   );
 
-  console.log("🧠 messages.results:", JSON.stringify(messages?.results, null, 2));
+  const {topElementRef,handleLoadMore,CanLoadMore,isLoadingMore} = UseInfiniteScroll({
+    status: messages.status,
+    loadMore: messages.loadMore,
+    loadSize: 10,
+  });
+  
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -116,6 +124,12 @@ export const WidgetChatScreen = () => {
       </WidgetHeader>
       <AIConversation>
         <AIConversationContent>
+          <InfiniteScrollTrigger
+          canLoadMore={CanLoadMore}
+          isLoadingMore={isLoadingMore}
+          onLoadMore={handleLoadMore}
+          ref={topElementRef}
+          />
           {toUIMessages(messages.results ?? [])?.map((message) => {
             return (
               <AIMessage
@@ -127,6 +141,13 @@ export const WidgetChatScreen = () => {
                    {message.content}
                   </AIResponse>
                 </AIMessageContent>
+                {message.role === "assistant" && (
+                  <DicebearAvatar
+                  imageUrl="/logo.svg"
+                  seed="assistant"
+                  size={32}
+                  />
+                )}
               </AIMessage>
             );
           })}
