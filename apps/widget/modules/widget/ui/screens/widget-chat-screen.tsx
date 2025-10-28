@@ -85,6 +85,7 @@ export const WidgetChatScreen = () => {
     status: messages.status,
     loadMore: messages.loadMore,
     loadSize: 10,
+   
   });
   
 

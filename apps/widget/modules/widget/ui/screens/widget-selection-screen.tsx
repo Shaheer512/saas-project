@@ -8,6 +8,7 @@ import { contactSessionAtomFamily, conversationIdAtom, errorMessageAtom, organiz
 import { useMutation } from "convex/react";
 import { api } from "@workspace/backend/_generated/api";
 import { useState } from "react";
+import { WidgetFooter } from "../components/widget-footer";
 
 export const WidgetSelectionScreen = () =>{
     const setScreen = useSetAtom(screenAtom);
@@ -76,6 +77,7 @@ console.log("organizationId:", organizationId);
                 <ChevronRightIcon/>
             </Button>
         </div>
+        <WidgetFooter/>
         </>
     )
 }
