@@ -138,6 +138,9 @@ importers:
       convex:
         specifier: ^1.28.0
         version: 1.28.0(@clerk/clerk-react@5.53.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
+      countries-and-timezones:
+        specifier: ^3.8.0
+        version: 3.8.0
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -147,6 +150,9 @@ importers:
       input-otp:
         specifier: ^1.4.2
         version: 1.4.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      jotai:
+        specifier: ^2.15.0
+        version: 2.15.0(@babel/core@7.28.4)(@babel/template@7.27.2)(@types/react@19.2.2)(react@19.2.0)
       lucide-react:
         specifier: ^0.475.0
         version: 0.475.0(react@19.2.0)
@@ -3107,6 +3113,10 @@ packages:
 
   core-js-pure@3.46.0:
     resolution: {integrity: sha512-NMCW30bHNofuhwLhYPt66OLOKTMbOhgTTatKVbaQC3KRHpTCiRIBYvtshr+NBYSnBxwAFhjW/RfJ0XbIjS16rw==}
+
+  countries-and-timezones@3.8.0:
+    resolution: {integrity: sha512-+Ze9h5f4dQpUwbzTm0DEkiPiZyim9VHV4/mSnT4zNYJnrnfwsKjAZPtnp7J5VzejCDgySs+2SSc6MDdCnD43GA==}
+    engines: {node: '>=8.x', npm: '>=5.x'}
 
   create-require@1.1.1:
     resolution: {integrity: sha512-dcKFX3jn0MpIaXjisoRvexIJVEKzaq7z2rZKxf+MSr9TkdmHmsU4m2lcLojrj/FHl8mk5VxMmYA+ftRkP/3oKQ==}
@@ -8225,6 +8235,8 @@ snapshots:
   cookie@1.0.2: {}
 
   core-js-pure@3.46.0: {}
+
+  countries-and-timezones@3.8.0: {}
 
   create-require@1.1.1: {}
 
