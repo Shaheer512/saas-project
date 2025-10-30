@@ -48,7 +48,7 @@ export const create = action({
             ctx,
             {threadId: args.threadId},
             {
-                prompt: args.prompt || ""
+                prompt: args.prompt,
             }
         )
     }
