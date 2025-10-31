@@ -1,7 +1,6 @@
 import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { Agent } from "@convex-dev/agent";
 import { components } from "../../../_generated/api";
-
 const google = createGoogleGenerativeAI({
   apiKey: process.env.GOOGLE_API_KEY!,
   
@@ -10,7 +9,7 @@ const google = createGoogleGenerativeAI({
 const supportAgent = new Agent(components.agent, {
   name: "support-agent", 
   chat: google.chat("gemini-2.0-flash"),
-  instructions: "You are a helpful and friendly customer support assistant.",
+  instructions: `You are a helpful and friendly customer support assistant. Use "resolveConversation" tool when user expresses finalization of the conversation. Use "escalateConversation" tool when user expenses frustation, or requests a human explicity.`,
 });
 
 export { supportAgent };
